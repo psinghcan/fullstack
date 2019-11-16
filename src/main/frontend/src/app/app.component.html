@@ -1,13 +1,46 @@
-<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-  <div class="container">
-    <a class="navbar-brand">Welcome to the application</a>
-    <ul class="nav navbar-nav" routerLinkActive="active">
-      <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="customers">Customers</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="products">Products</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="purchases">Purchases</a></li>
-    </ul>
-  </div>
-</nav>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+
+    <button mat-icon-button [matMenuTriggerFor]="appMenu" color="accent">
+      <mat-icon>home</mat-icon>
+    </button>
+    <mat-menu #appMenu="matMenu" color="primary">
+      <button mat-menu-item routerLink="/listCustomers" color="accent">Customers</button>
+      <button mat-menu-item routerLink="/listProducts">Products</button>
+      <button mat-menu-item routerLink="/listPurchases">Purchases</button>
+    </mat-menu>
+    <span class="example-fill-remaining-space"></span>
+<!--------------------------------->
+
+    <!-- admin-->
+    <button mat-icon-button routerLink="/about">
+      <mat-icon>copyright</mat-icon>
+    </button>
+
+    <!--    ----------------------->
+    <!-- admin-->
+    <button mat-icon-button [matMenuTriggerFor]="adminMenu">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <mat-menu #adminMenu="matMenu">
+      <button mat-menu-item routerLink="/home">Admin</button>
+      <button mat-menu-item routerLink="/home">Jobs</button>
+    </mat-menu>
+  <!--    ----------------------->
+
+    <!-- profile-->
+    <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+      <mat-icon>account_box</mat-icon>
+    </button>
+    <mat-menu #profileMenu="matMenu">
+      <button mat-menu-item routerLink="/home">Login</button>
+      <button mat-menu-item routerLink="/home">Edit Profile</button>
+    </mat-menu>
+    <!--    ----------------------->
+
+
+
+  </mat-toolbar-row>
+</mat-toolbar>
 
 <router-outlet></router-outlet>
