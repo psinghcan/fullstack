@@ -11,7 +11,7 @@ import {Observable} from 'rxjs';
 export class ListProductsComponent implements OnInit {
 
   constructor(private productService: ProductService) { }
-  tableColumns: string[] = ['id', 'sku', 'price', 'description', 'actions'];
+  tableColumns: string[] = ['id', 'sku', 'price', 'description'];
   products: Product[];
   ngOnInit() {
     this.productService.getProducts()

@@ -6,6 +6,14 @@
   width: 5px;
 }
 
+.mat-row:hover{
+  background-color: aquamarine;
+}
+
+.mat-header-row{
+  background-color: dimgray;
+}
+
 table {
   width: 100%;
 }
