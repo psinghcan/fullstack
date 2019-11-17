@@ -17,6 +17,7 @@ public class ProductService {
     }
 
     public Product saveProduct(Product product){
+        System.out.println("product " + product +" added to db");
         return productRepository.save(product);
     }
 

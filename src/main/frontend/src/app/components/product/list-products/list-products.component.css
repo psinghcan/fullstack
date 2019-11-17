@@ -1,6 +1,11 @@
 .example-fill-remaining-space{
   flex: 1 1 auto;
 }
+
+.five_pixel{
+  width: 5px;
+}
+
 table {
   width: 100%;
 }
